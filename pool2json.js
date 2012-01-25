@@ -2,7 +2,7 @@ var fs = require('fs');
 
 var questionText = fs.readFileSync(process.argv[2], 'utf8');
 
-var subelements = [], subelement, group, question;
+var subelements = [], subelement, group, question, withdrawnQuestions = 0;
 questionText.split('\n').forEach(function(line){
 	var match;
 	// console.error('LINE', line);
@@ -42,6 +42,7 @@ questionText.split('\n').forEach(function(line){
 		// console.error('WITHDRAWN QUESTION');
 		// /dev/null this question
 		question = { answers: [] };
+		withdrawnQuestions += 1;
 	} else if ((match = line.match(/^([A-Z]\d+[A-Z]+\d+) *\(([A-D])\)(?: \[([^\]]+)\]?)?\s*$/))) {
 		// console.error('START QUESTION');
 		group.questions.push(question = {
@@ -54,5 +55,32 @@ questionText.split('\n').forEach(function(line){
 		console.error('Unknown line:', line)
 	}
 });
+
+var inputQuestionIds = questionText.match(/^[A-Z]\d+[A-Z]+\d+/gm),
+	outputQuestionIds = subelements.reduce(function(acc, subelement){
+	return acc.concat(subelement.groups.reduce(function(acc, group){
+		return acc.concat(group.questions.map(function(q){
+			return q.id; }));
+		}, []));
+	}, []);
+
+console.error('Input appears to contain', inputQuestionIds.length.toString(), 'questions');
+console.error('Found', outputQuestionIds.length.toString(),'questions' + (withdrawnQuestions ? ' plus ' + withdrawnQuestions + ' withdrawn' : ''));
+if (inputQuestionIds.length - withdrawnQuestions === outputQuestionIds.length) {
+	console.error('Great!');
+} else {
+	console.error("That's not good.");
+	console.error("Their questions:");
+	console.error(inputQuestionIds.join('\n'));
+	console.error("\nOur questions:");
+	console.error(outputQuestionIds.join('\n'));
+}
+subelements.forEach(function(subelement){
+	if (subelement.groupCount != subelement.groups.length) {
+		console.error('Wrong number of groups in subelement', subelement.id);
+	}
+	delete subelement.groupCount;
+})
+
 process.stdout.write(JSON.stringify(subelements, null, '\t'));
 process.stdout.write('\n');
