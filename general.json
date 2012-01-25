@@ -2558,8 +2558,8 @@
 						"correctAnswer": 1,
 						"answers": [
 							"The socket is not wired with an RF-shielded power cable",
-							"The socket's wiring may be inadequate for the current being drawn by the",
-							"The DC polarity of the socket is reversed from the polarity of modern HF",
+							"The socket's wiring may be inadequate for the current being drawn by the transceiver",
+							"The DC polarity of the socket is reversed from the polarity of modern HF transceivers",
 							"Drawing more than 50 watts from this socket could cause the engine to overheat"
 						],
 						"question": "Why is it best NOT to draw the DC power for a 100-watt HF transceiver from an automobile's auxiliary power socket?"
@@ -2783,13 +2783,20 @@
 							"To minimize transmitter power output",
 							"To maximize the transfer of power",
 							"To reduce power supply ripple",
-							"To minimize radiation resistance",
+							"To minimize radiation resistance"
+						],
+						"question": "What is one reason to use an impedance matching transformer?"
+					},
+					{
+						"id": "G5A13",
+						"correctAnswer": 3,
+						"answers": [
 							"A transformer",
 							"A Pi-network",
 							"A length of transmission line",
 							"All of these choices are correct"
 						],
-						"question": "What is one reason to use an impedance matching transformer?"
+						"question": "Which of the following devices can be used for impedance matching at radio frequencies?"
 					}
 				]
 			},
@@ -4314,7 +4321,7 @@
 							"8 kHz",
 							"16 kHz"
 						],
-						"question": "What is the total bandwidth of an FM-phone transmission having a 5 kHz"
+						"question": "What is the total bandwidth of an FM-phone transmission having a 5 kHz deviation and a 3 kHz modulating frequency?"
 					},
 					{
 						"id": "G8B07",
@@ -4400,7 +4407,7 @@
 						"id": "G9A01",
 						"correctAnswer": 0,
 						"answers": [
-							"The distance between the centers of the conductors and the radius of the",
+							"The distance between the centers of the conductors and the radius of the conductors",
 							"The distance between the centers of the conductors and the length of the line",
 							"The radius of the conductors and the frequency of the signal",
 							"The frequency of the signal and the length of the line"
