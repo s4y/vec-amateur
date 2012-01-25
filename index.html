@@ -21,9 +21,9 @@ html{
 <script>
 $.getJSON('general.json', function(pool){
 	document.body.appendChild(haj(stencil({ $key: '', $children: [
-		['%h1', 'Subelement ', { $key: 'id' }, ' – ', { $key: 'name' }],
+		['%h1', 'Subelement ', { $key: 'id' }, ' \u2013 ', { $key: 'name' }],
 		{ $key: 'groups', $children: [
-			['%h2', { $key: 'id' }, ' – ', { $key: 'name' }],
+			['%h2', { $key: 'id' }, ' \u2013 ', { $key: 'name' }],
 			{ $key: 'questions', $children: [
 				[ '%h3', { $key: 'id' }, ' (', {
 					$key: 'correctAnswer',
