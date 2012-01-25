@@ -16,6 +16,10 @@ questionText.split('\n').forEach(function(line){
 		} else if (/~~\s*/.test(line)) {
 			console.error('END QUESTION');
 			question = null;
+		} else if (question.answers.length) {
+			question.answers[question.answers.length - 1] += ' ' + line;
+		} else {
+			question.question += ' ' + line;
 		}
 	} else if (/^\s*$/g.test(line)) {
 	} else if ((match = line.match(/^(?:SUBELEMENT )?([A-Z]\d+) [-–—] ([^\]]+) \[(\d+) Exam Questions [-–—] (\d+) Groups\]\s*$/i))) {
