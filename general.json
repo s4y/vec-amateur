@@ -2,8 +2,7 @@
 	{
 		"id": "G1",
 		"name": "COMMISSION'S RULES",
-		"questionCount": 5,
-		"groupCount": 5,
+		"testQuestions": 5,
 		"groups": [
 			{
 				"id": "G1A",
@@ -735,8 +734,7 @@
 	{
 		"id": "G2",
 		"name": "OPERATING PROCEDURES",
-		"questionCount": 5,
-		"groupCount": 5,
+		"testQuestions": 5,
 		"groups": [
 			{
 				"id": "G2A",
@@ -1417,8 +1415,7 @@
 	{
 		"id": "G3",
 		"name": "RADIO WAVE PROPAGATION",
-		"questionCount": 3,
-		"groupCount": 3,
+		"testQuestions": 3,
 		"groups": [
 			{
 				"id": "G3A",
@@ -1471,7 +1468,7 @@
 					{
 						"id": "G3A05",
 						"correctAnswer": 3,
-						"reference": "Modified}",
+						"reference": "Modified",
 						"answers": [
 							"A measure of the highest frequency that is useful for ionospheric propagation between two points on the Earth ",
 							"A count of sunspots which is adjusted for solar emissions",
@@ -1895,8 +1892,7 @@
 	{
 		"id": "G4",
 		"name": "AMATEUR RADIO PRACTICES",
-		"questionCount": 5,
-		"groupCount": 5,
+		"testQuestions": 5,
 		"groups": [
 			{
 				"id": "G4A",
@@ -2648,8 +2644,7 @@
 	{
 		"id": "G5",
 		"name": "ELECTRICAL PRINCIPLES",
-		"questionCount": 3,
-		"groupCount": 3,
+		"testQuestions": 3,
 		"groups": [
 			{
 				"id": "G5A",
@@ -3136,8 +3131,7 @@
 	{
 		"id": "G6",
 		"name": "CIRCUIT COMPONENTS",
-		"questionCount": 3,
-		"groupCount": 3,
+		"testQuestions": 3,
 		"groups": [
 			{
 				"id": "G6A",
@@ -3668,8 +3662,7 @@
 	{
 		"id": "G7",
 		"name": "PRACTICAL CIRCUITS",
-		"questionCount": 3,
-		"groupCount": 3,
+		"testQuestions": 3,
 		"groups": [
 			{
 				"id": "G7A",
@@ -4112,8 +4105,7 @@
 	{
 		"id": "G8",
 		"name": "SIGNALS AND EMISSIONS",
-		"questionCount": 2,
-		"groupCount": 2,
+		"testQuestions": 2,
 		"groups": [
 			{
 				"id": "G8A",
@@ -4396,8 +4388,7 @@
 	{
 		"id": "G9",
 		"name": "ANTENNAS AND FEED LINES",
-		"questionCount": 4,
-		"groupCount": 4,
+		"testQuestions": 4,
 		"groups": [
 			{
 				"id": "G9A",
@@ -5044,8 +5035,7 @@
 	{
 		"id": "G0",
 		"name": "ELECTRICAL AND RF SAFETY",
-		"questionCount": 2,
-		"groupCount": 2,
+		"testQuestions": 2,
 		"groups": [
 			{
 				"id": "G0A",
