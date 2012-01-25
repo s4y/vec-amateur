@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<style>
+html{
+	font: 14px "Helvetica Neue", "Helvetica", "Arial", sans-serif;
+}
+.answers{
+	list-style-type: upper-alpha;
+}
+	</style>
+</head>
+
+<body>
+
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.min.js"></script>
+<script src="haj.js"></script>
+<script src="stencil.js"></script>
+<script>
+$.getJSON('general.json', function(pool){
+	document.body.appendChild(haj(stencil({ $key: '', $children: [
+		['%h1', 'Subelement ', { $key: 'id' }, ' – ', { $key: 'name' }],
+		{ $key: 'groups', $children: [
+			['%h2', { $key: 'id' }, ' – ', { $key: 'name' }],
+			{ $key: 'questions', $children: [
+				[ '%h3', { $key: 'id' }, ' (', {
+					$key: 'correctAnswer',
+					$handler: function(a){
+						return (a + 10).toString(26).toUpperCase();
+					}
+				}, ')',
+					{ $test: { $key: 'reference' }, $if: [ ' [', { $key: 'reference' }, ']' ] }
+				],
+				[ '%p', { $key: 'question' } ],
+				[ '%ol.answers', { $key: 'answers', $children: [ '%li',
+					{ $key: '' }
+				] } ]
+			] }
+		] }
+	]}, pool)));
+})
+</script>
+</body>
+</html>
