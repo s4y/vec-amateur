@@ -27,7 +27,7 @@ questionText.split('\n').forEach(function(line){
 		subelements.push(subelement = {
 			id: match[1],
 			name: match[2],
-			questionCount: parseInt(match[3], 10),
+			testQuestions: parseInt(match[3], 10),
 			groupCount: parseInt(match[4], 10),
 			groups: []
 		});
